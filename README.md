@@ -5,7 +5,7 @@
 
 
 ### 🔨 사용한 의존성
-JAVA 11, Spirng Boot(2.7.13), springCloud(2021.0.8), Spring Data JPA, Validation, Lombok, Thymeleaf, H2 Database, Kakao Social Login
+JAVA 11, Spirng Boot(2.7.13), SpringCloud(2021.0.8), Spring Data JPA, Validation, Lombok, Thymeleaf, H2 Database, Kakao Social Login
 
 
 ### ✍ Flow
