@@ -14,11 +14,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-    show-spl: true
     properties:
       hibernate:
         format_sql: true # sql 보기좋게 출력
         default_batch_fetch_size: 500 # 1:n 컬렉션 조회 성능 최적화 -> 쿼리 where in 절 사용
+    show-sql: true
     open-in-view: false # 영속성 컨텍스트 생존을 트랙잭션 범위로 한정
 
   servlet:
