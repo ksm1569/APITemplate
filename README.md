@@ -20,3 +20,5 @@ JAVA 11, Spirng Boot(2.7.13), SpringCloud(2021.0.8), Spring Data JPA, Validation
 7. Spring Cloud OpenFeign
 8. JWT
 9. 카카오 토큰발급
+10. 소셜로그인 팩토리패턴으로 구조설계
+11. 소셜로그인 테스트 -> 카카오
