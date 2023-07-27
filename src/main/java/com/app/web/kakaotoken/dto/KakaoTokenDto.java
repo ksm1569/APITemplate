@@ -19,7 +19,7 @@ public class KakaoTokenDto {
     @Builder @Getter
     public static class Response {
         private String token_type;
-        private String acess_token;
+        private String access_token;
         private Integer expires_in;
         private String refresh_token;
         private Integer refresh_token_expires_in;
