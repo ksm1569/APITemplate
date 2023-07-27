@@ -1,6 +1,7 @@
 package com.app.global.error;
 
 import lombok.Getter;
+import org.aspectj.weaver.patterns.HasMemberTypePatternForPerThisMatching;
 import org.springframework.http.HttpStatus;
 
 @Getter
@@ -18,7 +19,7 @@ public enum ErrorCode {
 
     // 회원
     INVALID_MEMBER_TYPE(HttpStatus.BAD_REQUEST, "M-001", "잘못된 회원 타입 입니다."),
-
+    ALREADY_REGISTERED_MEMBER(HttpStatus.BAD_REQUEST, "M-002", "이미 가입 된 회원 입니다."),
     ;
 
     ErrorCode(HttpStatus httpStatus, String errorCode, String message){
