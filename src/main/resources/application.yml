@@ -29,6 +29,9 @@ spring:
     multipart:
       max-file-size: 10MB # 파일 하나의 크기를 10MB 제한
       max-request-size: 100MB #전체 파일 크기합을 100MB 제한
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 logging:
   level:
