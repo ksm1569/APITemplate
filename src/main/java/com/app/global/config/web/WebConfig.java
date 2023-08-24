@@ -3,7 +3,10 @@ package com.app.global.config.web;
 import com.app.global.interceptor.AdminAuthorizationInterceptor;
 import com.app.global.interceptor.AuthenticationInterceptor;
 import com.app.global.resolver.memberinfo.MemberInfoArgumentResolver;
+import com.navercorp.lucy.security.xss.servletfilter.XssEscapeServletFilter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
@@ -11,6 +14,8 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import javax.servlet.Filter;
+import javax.servlet.FilterRegistration;
 import java.util.List;
 
 @Configuration
@@ -55,5 +60,15 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
         resolvers.add(memberInfoArgumentResolver);
+    }
+
+    @Bean
+    public FilterRegistrationBean<XssEscapeServletFilter> filterFilterRegistrationBean() {
+        FilterRegistrationBean<XssEscapeServletFilter> filterFilterRegistration = new FilterRegistrationBean<>();
+        filterFilterRegistration.setFilter(new XssEscapeServletFilter());
+        filterFilterRegistration.setOrder(1);
+        filterFilterRegistration.addUrlPatterns("/*");
+
+        return filterFilterRegistration;
     }
 }
