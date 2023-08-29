@@ -5,7 +5,7 @@
 
 
 ### 🔨 사용한 의존성
-JAVA 11, Spirng Boot(2.7.13), SpringCloud(2021.0.8), Spring Data JPA, Validation, Lombok, Thymeleaf, H2 Database, Kakao Social Login
+JAVA 11, Spirng Boot(2.7.13), SpringCloud(2021.0.8), Spring Data JPA, Validation, Lombok, Thymeleaf, H2 Database, Kakao Social Login, jasypt, swagger, lucy-xss-servlet
 
 
 ### ✍ Flow
@@ -22,3 +22,7 @@ JAVA 11, Spirng Boot(2.7.13), SpringCloud(2021.0.8), Spring Data JPA, Validation
 9. 카카오 토큰발급
 10. 소셜로그인 팩토리패턴으로 구조설계
 11. 소셜로그인 테스트 -> 카카오
+12. 인증,인가 인터셉터 구현
+13. jasypt - yml 암호화
+14. swagger - API 문서화
+15. 네이버 lucy-xss-servlet - XSS 방어
